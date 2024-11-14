@@ -8,7 +8,6 @@ import random
 def main():
     try:
         pygame.init()
-        counter = 0
         # You can draw the mole with this snippet:
         pygame.display.set_caption("Whack-A-Mole")
         mole_image = pygame.image.load("mole.png")
@@ -22,7 +21,6 @@ def main():
                 if event.type == pygame.QUIT:
                     running = False
                 elif event.type == MOUSEBUTTONDOWN:
-                    counter +=1
                     x, y = event.pos
                     if x//32 == mole_x and y//32 == mole_y:
                         mole_x = random.randrange(0, 20)
